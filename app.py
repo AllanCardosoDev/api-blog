@@ -3,7 +3,7 @@
 # Então agora entendendo que iremos usar o Flask para construir nosso api, temos 2 vamos chamar de modos diferentes de criar um api dentro do flask
 # As duas opções são FLASK comum e FLASK RESTFUL.
 # O flask restuful usa um biblioteca extra e na minha opinião e experiência adicona uma nivel de complexidade que pode dificultar muito para quem está iniciando e não consegui encontrar benefícios significativos que justifcasse ensinar usando ele.
-# Então iremos usar o flask comum que é infinitamente mais simples de criar e usar. 
+# Então iremos usar o flask comum que é infinitamente mais simples de criar e usar.
 # vamos lá
 # Para começar nós temos que importar algumas funcionalidades de dentro do módulo flask
 # Vamos precisa do flask em si
@@ -16,7 +16,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 # Não se preocupe muito com isso, essa sintaxe está apenas dizendo que o arquivo atual deve executar e rodar um servidor flask
 # Então vamos ao passo a passo sobre como criar apis
-# Qual é 
+# Qual é
 '''
 1- Definir o objetivo da API:
 	ex: Iremos montar uma api de blog, onde eu poderei consultar, edit, criar e excluir postagens em um blog usando somente a api(maybe show them devaprender.com)
@@ -91,5 +91,6 @@ def excluir_postagem(indice):
     return jsonify(f'Foi excluído a postagem {postagem}', 200)
 
 
+# test
 if __name__ == "__main__":
     app.run(port=5000, host='localhost', debug=True)
